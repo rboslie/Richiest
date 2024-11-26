@@ -23,7 +23,7 @@ local example = library:CreateWindow({
 })
 example:AddToggle("Auto Farm [Trucker]", function(state)
    getfenv().drive = (state and true or false)
-   workspace.Gravity = 315
+   workspace.Gravity = 450
    if workspace.Map:findFirstChild("Prop") then
     workspace.Map.Prop:Destroy()
    end
@@ -44,7 +44,7 @@ fireproximityprompt(workspace.Etc.Job.Truck.Starter.Prompt)
 until workspace.Etc.Waypoint.Waypoint.Position ~= prepos
 wait(2)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame= workspace.Etc.Job.Truck.Spawner.Part.CFrame
-workspace.Gravity = 315
+workspace.Gravity = 450
 wait(2)
 local thetruck = nil
 repeat wait()
@@ -179,7 +179,7 @@ local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace
 OnTween:Play()
 OnTween.Completed:Wait()
 end
-workspace.Gravity = 315
+workspace.Gravity = 450
 for i, v in pairs(car:GetDescendants()) do
     pcall(function()
     v.Velocity = Vector3.new(0,0,0)
@@ -188,7 +188,7 @@ end
 wait(2)
     end
 until prepos ~= workspace.Etc.Waypoint.Waypoint.Position
-workspace.Gravity = 315
+workspace.Gravity = 450
 end
 end)
 end
