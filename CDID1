@@ -123,7 +123,7 @@ local primary = car.PrimaryPart
 workspace.Gravity = 0
 local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position+Vector3.new(0,30,0)).magnitude
 local TweenService = game:GetService("TweenService")
-local TweenInfoToUse = TweenInfo.new(dist/75, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+local TweenInfoToUse = TweenInfo.new(dist/100, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
 
 local TweenValue = Instance.new("CFrameValue")
 TweenValue.Value = car:GetPrimaryPartCFrame()
@@ -146,7 +146,7 @@ repeat task.wait()
         workspace.Gravity = 0
         local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position).magnitude
         local TweenService = game:GetService("TweenService")
-        local TweenInfoToUse = TweenInfo.new(2.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+        local TweenInfoToUse = TweenInfo.new(2.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
         
         local TweenValue = Instance.new("CFrameValue")
         TweenValue.Value = car:GetPrimaryPartCFrame()
@@ -167,7 +167,7 @@ local primary = car.PrimaryPart
 workspace.Gravity = 0
 local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position-Vector3.new(0,25,0)).magnitude
 local TweenService = game:GetService("TweenService")
-local TweenInfoToUse = TweenInfo.new(2.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+local TweenInfoToUse = TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
 
 local TweenValue = Instance.new("CFrameValue")
 TweenValue.Value = car:GetPrimaryPartCFrame()
