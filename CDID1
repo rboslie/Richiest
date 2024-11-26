@@ -23,7 +23,7 @@ local example = library:CreateWindow({
 })
 example:AddToggle("Auto Farm [Trucker]", function(state)
    getfenv().drive = (state and true or false)
-   workspace.Gravity = 200
+   workspace.Gravity = 50
    if workspace.Map:findFirstChild("Prop") then
     workspace.Map.Prop:Destroy()
    end
@@ -44,7 +44,7 @@ fireproximityprompt(workspace.Etc.Job.Truck.Starter.Prompt)
 until workspace.Etc.Waypoint.Waypoint.Position ~= prepos
 wait(2)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame= workspace.Etc.Job.Truck.Spawner.Part.CFrame
-workspace.Gravity = 200
+workspace.Gravity = 50
 wait(2)
 local thetruck = nil
 repeat wait()
@@ -101,7 +101,7 @@ local car = seat.Parent
 local primary = car.PrimaryPart
 workspace.Gravity = 0
 local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position+Vector3.new(0,1000,0)).magnitude
-print(dist/200)
+print(dist/50)
 local TweenService = game:GetService("TweenService")
 local TweenInfoToUse = TweenInfo.new(40, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
 
@@ -123,7 +123,7 @@ local primary = car.PrimaryPart
 workspace.Gravity = 0
 local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position+Vector3.new(0,30,0)).magnitude
 local TweenService = game:GetService("TweenService")
-local TweenInfoToUse = TweenInfo.new(dist/200, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+local TweenInfoToUse = TweenInfo.new(dist/50, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
 
 local TweenValue = Instance.new("CFrameValue")
 TweenValue.Value = car:GetPrimaryPartCFrame()
@@ -179,7 +179,7 @@ local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace
 OnTween:Play()
 OnTween.Completed:Wait()
 end
-workspace.Gravity = 200
+workspace.Gravity = 50
 for i, v in pairs(car:GetDescendants()) do
     pcall(function()
     v.Velocity = Vector3.new(0,0,0)
@@ -188,7 +188,7 @@ end
 wait(2)
     end
 until prepos ~= workspace.Etc.Waypoint.Waypoint.Position
-workspace.Gravity = 200
+workspace.Gravity = 50
 end
 end)
 end
